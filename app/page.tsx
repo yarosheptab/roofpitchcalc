@@ -1,65 +1,91 @@
-import Image from "next/image";
+import type { Metadata } from 'next'
+import Calculator from '@/components/Calculator'
+import PitchTable from '@/components/PitchTable'
+import FAQ from '@/components/FAQ'
+import { FAQ_ITEMS } from '@/lib/faq-data'
+import BlogCard from '@/components/BlogCard'
+import JsonLd from '@/components/JsonLd'
+import { getAllPostsMeta } from '@/lib/blog'
+import { webApplicationSchema, faqSchema, breadcrumbSchema } from '@/lib/structured-data'
 
-export default function Home() {
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://roofpitchcalculator.app'
+
+export const metadata: Metadata = {
+  title: 'Roof Pitch Calculator – Calculate Pitch, Angle & Rafter Length Free',
+  description:
+    'Free roof pitch calculator. Enter rise and run to instantly calculate pitch ratio, angle in degrees, slope percentage, and rafter length. Fast, accurate, mobile-friendly.',
+  alternates: { canonical: `${SITE_URL}/` },
+  openGraph: {
+    title: 'Roof Pitch Calculator – Calculate Pitch, Angle & Rafter Length Free',
+    description:
+      'Free roof pitch calculator. Instantly calculate pitch ratio, angle, slope percentage, and rafter length.',
+    url: `${SITE_URL}/`,
+    type: 'website',
+  },
+}
+
+export default function HomePage() {
+  const recentPosts = getAllPostsMeta().slice(0, 3)
+
+  const schemas = [
+    webApplicationSchema(),
+    faqSchema(FAQ_ITEMS.map((f) => ({ question: f.question, answer: f.answer }))),
+    breadcrumbSchema([{ name: 'Home', url: `${SITE_URL}/` }]),
+  ]
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+    <>
+      {schemas.map((s, i) => (
+        <JsonLd key={i} schema={s} />
+      ))}
+
+      <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
+        <article>
+          {/* Hero */}
+          <header className="mb-8 text-center sm:text-left">
+            <h1 className="text-4xl font-bold text-primary sm:text-5xl">
+              Roof Pitch Calculator
+            </h1>
+            <p className="mt-3 max-w-2xl text-lg text-muted leading-relaxed">
+              Enter rise and run, an angle in degrees, or a pitch ratio to instantly calculate roof pitch, slope percentage, and rafter length — free, fast, and mobile-friendly.
+            </p>
+          </header>
+
+          {/* Calculator */}
+          <section aria-label="Calculator" className="mb-12">
+            <Calculator />
+          </section>
+
+          {/* Pitch reference table */}
+          <section aria-label="Common Roof Pitches Reference Table" className="mb-12">
+            <h2 className="mb-4 text-2xl font-bold text-primary">Common Roof Pitches Chart</h2>
+            <p className="mb-4 text-muted">
+              Quick reference table for all standard roof pitches from 1:12 to 16:12, including angles, slope percentages, and rafter multipliers.
+            </p>
+            <PitchTable />
+          </section>
+
+          {/* FAQ */}
+          <section aria-label="Frequently Asked Questions" className="mb-12">
+            <h2 className="mb-4 text-2xl font-bold text-primary">
+              Frequently Asked Questions
+            </h2>
+            <FAQ />
+          </section>
+
+          {/* Related articles */}
+          {recentPosts.length > 0 && (
+            <section aria-label="Related Articles" className="mb-8">
+              <h2 className="mb-4 text-2xl font-bold text-primary">Related Articles</h2>
+              <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                {recentPosts.map((post) => (
+                  <BlogCard key={post.slug} post={post} />
+                ))}
+              </div>
+            </section>
+          )}
+        </article>
+      </div>
+    </>
+  )
 }
