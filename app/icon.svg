@@ -2,20 +2,21 @@
   <rect width="32" height="32" rx="5" fill="#1B1814"/>
 
   <!-- Horizontal baseline -->
-  <line x1="6" y1="25" x2="26" y2="25" stroke="#FDFCF8" stroke-width="1.75" stroke-linecap="round"/>
+  <line x1="5" y1="26" x2="27" y2="26" stroke="#FDFCF8" stroke-width="1.75" stroke-linecap="round"/>
 
-  <!-- Diagonal line — ~35° pitch -->
-  <line x1="6" y1="25" x2="22" y2="13" stroke="#FDFCF8" stroke-width="1.75" stroke-linecap="round"/>
+  <!-- Diagonal line — 9:12 pitch (36.87°) -->
+  <line x1="5" y1="26" x2="21" y2="14" stroke="#FDFCF8" stroke-width="1.75" stroke-linecap="round"/>
 
-  <!-- Angle arc (brick red) — sweeps from horizontal to diagonal -->
-  <path d="M 15,25 A 9,9 0 0,1 13.4,19.8" stroke="#C0391E" stroke-width="1.75" fill="none" stroke-linecap="round"/>
+  <!-- Convex arc via quadratic Bézier — control point (20,19) pulls the curve
+       outward into the angle opening, making a clearly convex bow -->
+  <path d="M 17,26 Q 20,19 14.6,18.8" stroke="#C0391E" stroke-width="1.75" fill="none" stroke-linecap="round"/>
 
   <!-- Corner anchor dot -->
-  <circle cx="6" cy="25" r="1.5" fill="#FDFCF8"/>
+  <circle cx="5" cy="26" r="1.5" fill="#FDFCF8"/>
 
   <!-- Tick at end of horizontal -->
-  <line x1="26" y1="22.5" x2="26" y2="27.5" stroke="#FDFCF8" stroke-width="1.25" stroke-linecap="round"/>
+  <line x1="27" y1="24" x2="27" y2="28" stroke="#FDFCF8" stroke-width="1.25" stroke-linecap="round"/>
 
-  <!-- Tick at end of diagonal (perpendicular to it) -->
-  <line x1="20.3" y1="11.9" x2="23.7" y2="14.1" stroke="#FDFCF8" stroke-width="1.25" stroke-linecap="round"/>
+  <!-- Tick at end of diagonal (perpendicular to direction 0.8,-0.6) -->
+  <line x1="19.8" y1="12.4" x2="22.2" y2="15.6" stroke="#FDFCF8" stroke-width="1.25" stroke-linecap="round"/>
 </svg>
