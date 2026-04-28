@@ -42,42 +42,45 @@ export default function HomePage() {
       <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
         <article>
           {/* Hero */}
-          <header className="mb-8 text-center sm:text-left">
-            <h1 className="text-4xl font-bold text-primary sm:text-5xl">
+          <header className="mb-10">
+            <div className="mb-4 w-10 h-0.5 bg-accent" />
+            <h1 className="font-serif text-4xl font-normal text-primary leading-tight sm:text-5xl">
               Roof Pitch Calculator
             </h1>
-            <p className="mt-3 max-w-2xl text-lg text-muted leading-relaxed">
-              Enter rise and run, an angle in degrees, or a pitch ratio to instantly calculate roof pitch, slope percentage, and rafter length — free, fast, and mobile-friendly.
+            <p className="mt-4 max-w-2xl text-base text-muted leading-relaxed">
+              Enter rise and run, an angle in degrees, or a pitch ratio to instantly calculate roof pitch, slope percentage, and rafter length.
             </p>
           </header>
 
           {/* Calculator */}
-          <section aria-label="Calculator" className="mb-12">
+          <section aria-label="Calculator" className="mb-14">
             <Calculator />
           </section>
 
           {/* Pitch reference table */}
-          <section aria-label="Common Roof Pitches Reference Table" className="mb-12">
-            <h2 className="mb-4 text-2xl font-bold text-primary">Common Roof Pitches Chart</h2>
-            <p className="mb-4 text-muted">
-              Quick reference table for all standard roof pitches from 1:12 to 16:12, including angles, slope percentages, and rafter multipliers.
-            </p>
+          <section aria-label="Common Roof Pitches Reference Table" className="mb-14">
+            <div className="flex items-baseline gap-4 mb-5">
+              <h2 className="font-serif text-2xl font-normal text-primary">Common Roof Pitches</h2>
+              <span className="text-[10px] uppercase tracking-[0.1em] text-muted">Reference Chart</span>
+            </div>
             <PitchTable />
           </section>
 
           {/* FAQ */}
-          <section aria-label="Frequently Asked Questions" className="mb-12">
-            <h2 className="mb-4 text-2xl font-bold text-primary">
-              Frequently Asked Questions
-            </h2>
+          <section aria-label="Frequently Asked Questions" className="mb-14">
+            <div className="flex items-baseline gap-4 mb-5">
+              <h2 className="font-serif text-2xl font-normal text-primary">Frequently Asked Questions</h2>
+            </div>
             <FAQ />
           </section>
 
           {/* Related articles */}
           {recentPosts.length > 0 && (
             <section aria-label="Related Articles" className="mb-8">
-              <h2 className="mb-4 text-2xl font-bold text-primary">Related Articles</h2>
-              <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="flex items-baseline gap-4 mb-5">
+                <h2 className="font-serif text-2xl font-normal text-primary">Related Articles</h2>
+              </div>
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {recentPosts.map((post) => (
                   <BlogCard key={post.slug} post={post} />
                 ))}

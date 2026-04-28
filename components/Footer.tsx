@@ -3,42 +3,59 @@ import Link from 'next/link'
 export default function Footer() {
   const year = new Date().getFullYear()
 
+  const navLinks = [['/', 'Calculator'], ['/blog', 'Roofing Blog']] as const
+  const legalLinks = [
+    ['/privacy-policy',   'Privacy Policy'],
+    ['/terms-of-service', 'Terms of Service'],
+    ['/disclaimer',       'Disclaimer'],
+    ['/cookie-policy',    'Cookie Policy'],
+  ] as const
+
   return (
-    <footer className="border-t border-border bg-primary text-white mt-auto">
+    <footer className="border-t border-border bg-primary mt-auto">
       <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
-        <div className="grid gap-8 sm:grid-cols-3">
-          {/* Col 1 */}
+        <div className="grid gap-10 sm:grid-cols-3">
           <div>
-            <p className="text-lg font-bold mb-2">Roof Pitch Calculator</p>
-            <p className="text-sm text-blue-200 leading-relaxed">
-              Free online tool to calculate roof pitch, angle, slope percentage, and rafter length instantly.
+            <p className="font-serif text-lg text-surface mb-3">Roof Pitch Calculator</p>
+            <p className="text-sm leading-relaxed text-[#A09890]">
+              Free online tool for calculating roof pitch, angle in degrees, slope percentage, and rafter length.
             </p>
-            <p className="mt-4 text-xs text-blue-300">© {year} Roof Pitch Calculator</p>
           </div>
 
-          {/* Col 2 */}
           <div>
-            <p className="font-semibold mb-3 text-sm uppercase tracking-wide text-blue-200">Quick Links</p>
-            <ul className="flex flex-col gap-2 text-sm">
-              <li><Link href="/" className="text-blue-100 hover:text-white transition-colors">Calculator</Link></li>
-              <li><Link href="/blog" className="text-blue-100 hover:text-white transition-colors">Roofing Blog</Link></li>
+            <p className="text-[10px] uppercase tracking-[0.14em] font-medium text-[#A09890] mb-4">
+              Navigation
+            </p>
+            <ul className="flex flex-col gap-3">
+              {navLinks.map(([href, label]) => (
+                <li key={href}>
+                  <Link href={href} className="text-sm text-[#C8C0B8] hover:text-surface transition-colors">
+                    {label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Col 3 */}
           <div>
-            <p className="font-semibold mb-3 text-sm uppercase tracking-wide text-blue-200">Legal</p>
-            <ul className="flex flex-col gap-2 text-sm">
-              <li><Link href="/privacy-policy" className="text-blue-100 hover:text-white transition-colors">Privacy Policy</Link></li>
-              <li><Link href="/terms-of-service" className="text-blue-100 hover:text-white transition-colors">Terms of Service</Link></li>
-              <li><Link href="/disclaimer" className="text-blue-100 hover:text-white transition-colors">Disclaimer</Link></li>
-              <li><Link href="/cookie-policy" className="text-blue-100 hover:text-white transition-colors">Cookie Policy</Link></li>
+            <p className="text-[10px] uppercase tracking-[0.14em] font-medium text-[#A09890] mb-4">
+              Legal
+            </p>
+            <ul className="flex flex-col gap-3">
+              {legalLinks.map(([href, label]) => (
+                <li key={href}>
+                  <Link href={href} className="text-sm text-[#C8C0B8] hover:text-surface transition-colors">
+                    {label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
 
-        <div className="mt-8 border-t border-blue-800 pt-6 text-center text-xs text-blue-300">
-          © {year} Roof Pitch Calculator. All rights reserved. For informational purposes only — always consult a licensed roofing contractor.
+        <div className="mt-10 border-t border-[#2E2B26] pt-6 text-xs text-[#7A7168]">
+          © {year} Roof Pitch Calculator. All rights reserved.
+          Results are for informational purposes only — verify with a licensed contractor before construction.
         </div>
       </div>
     </footer>
