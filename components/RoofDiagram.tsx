@@ -21,7 +21,7 @@ export default function RoofDiagram({ result, spanFt }: Props) {
     : baseY - 8
 
   const angleDeg = result?.angleDeg ?? 0
-  const pitchLabel = result ? `${result.pitchRatio.toFixed(1)}:12` : ''
+  const pitchLabel = result ? `${result.pitchRatio.toFixed(2)}:12` : ''
 
   return (
     <div className="border border-border bg-surface w-full">
@@ -35,6 +35,13 @@ export default function RoofDiagram({ result, spanFt }: Props) {
           aria-label="Roof cross-section diagram"
           role="img"
         >
+          <style>{`
+            @media (max-width: 640px) {
+              .d-sm { font-size: 13px; }
+              .d-md { font-size: 14px; }
+              .d-lg { font-size: 17px; }
+            }
+          `}</style>
           {/* Grid dots — technical drafting aesthetic */}
           {Array.from({ length: 6 }, (_, r) =>
             Array.from({ length: 10 }, (_, c) => (
@@ -91,35 +98,40 @@ export default function RoofDiagram({ result, spanFt }: Props) {
             />
           )}
 
-          {/* Angle arc */}
-          {pitch > 0 && (
-            <path
-              d={`M ${rightX - 24},${baseY} A 24,24 0 0,0 ${rightX - 24 * Math.cos(angleDeg * Math.PI / 180)},${baseY - 24 * Math.sin(angleDeg * Math.PI / 180)}`}
-              fill="none"
-              stroke="#7A7168"
-              strokeWidth="0.75"
-            />
-          )}
+          {/* Angle arc — use the visual rafter angle (atan2 of drawn apex), not the true pitch angle */}
+          {pitch > 0 && (() => {
+            const r = 24
+            const alpha = Math.atan2(baseY - apexY, rightX - apexX)
+            return (
+              <path
+                d={`M ${rightX - r},${baseY} Q ${rightX - r * 1.3 * Math.cos(alpha / 2)},${baseY - r * 1.3 * Math.sin(alpha / 2)} ${rightX - r * Math.cos(alpha)},${baseY - r * Math.sin(alpha)}`}
+                fill="none"
+                stroke="#7A7168"
+                strokeWidth="0.75"
+              />
+            )
+          })()}
 
           {pitch > 0 ? (
             <>
               {/* Rise label */}
-              <text x={apexX + 5} y={(baseY + apexY) / 2 + 4} fontSize="10" fill="#C0391E" fontFamily="var(--font-sora, sans-serif)" fontWeight="500">
+              <text x={apexX + 5} y={(baseY + apexY) / 2 + 4} fontSize="10" className="d-md" fill="#C0391E" fontFamily="var(--font-sora, sans-serif)" fontWeight="500">
                 Rise
               </text>
               {/* Run label */}
-              <text x={(apexX + rightX) / 2} y={baseY + 13} fontSize="10" fill="#7A7168" fontFamily="var(--font-sora, sans-serif)" textAnchor="middle">
+              <text x={(apexX + rightX) / 2} y={baseY + 13} fontSize="10" className="d-md" fill="#7A7168" fontFamily="var(--font-sora, sans-serif)" textAnchor="middle">
                 Run
               </text>
               {/* Angle */}
-              <text x={rightX - 44} y={baseY - 8} fontSize="9" fill="#7A7168" fontFamily="var(--font-geist-mono, monospace)">
-                {angleDeg.toFixed(1)}°
+              <text x={rightX - 44} y={baseY - 8} fontSize="9" className="d-sm" fill="#7A7168" fontFamily="var(--font-geist-mono, monospace)" textAnchor="middle">
+                {angleDeg.toFixed(2)}°
               </text>
-              {/* Pitch label in center */}
+              {/* Pitch label above apex */}
               <text
                 x={apexX}
-                y={apexY > 60 ? (baseY + apexY) / 2 + 5 : apexY + 18}
+                y={apexY - 8}
                 fontSize="12"
+                className="d-lg"
                 fill="#1B1814"
                 fontFamily="var(--font-geist-mono, monospace)"
                 fontWeight="600"
@@ -133,16 +145,17 @@ export default function RoofDiagram({ result, spanFt }: Props) {
                   x={(apexX + rightX) / 2 + 12}
                   y={(baseY + apexY) / 2 - 6}
                   fontSize="9"
+                  className="d-sm"
                   fill="#0C2340"
                   fontFamily="var(--font-geist-mono, monospace)"
                   textAnchor="middle"
                 >
-                  {result.rafterLengthFt.toFixed(1)} ft
+                  {result.rafterLengthFt.toFixed(2)} ft
                 </text>
               )}
             </>
           ) : (
-            <text x={apexX} y={baseY - 18} fontSize="11" fill="#7A7168" fontFamily="var(--font-sora, sans-serif)" textAnchor="middle">
+            <text x={apexX} y={baseY - 18} fontSize="11" className="d-md" fill="#7A7168" fontFamily="var(--font-sora, sans-serif)" textAnchor="middle">
               Enter values to see diagram
             </text>
           )}
