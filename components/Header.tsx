@@ -28,7 +28,7 @@ export default function Header() {
 
         {/* Mobile hamburger */}
         <button
-          className="sm:hidden flex flex-col gap-1.5 p-2"
+          className="cursor-pointer sm:hidden flex flex-col gap-1.5 p-2"
           onClick={() => setMenuOpen((o) => !o)}
           aria-label="Toggle navigation"
           aria-expanded={menuOpen}

@@ -175,7 +175,7 @@ export default function Calculator() {
           <button
             key={tab.id}
             onClick={() => handleTabChange(tab.id)}
-            className={`flex-1 px-4 py-3 text-sm font-medium transition-colors ${
+            className={`cursor-pointer flex-1 px-4 py-3 text-sm font-medium transition-colors ${
               activeTab === tab.id
                 ? 'border-b-2 border-accent text-accent bg-orange-50'
                 : 'text-muted hover:text-site-text hover:bg-bg'
@@ -214,14 +214,14 @@ export default function Calculator() {
             <div className="flex gap-2 pt-1">
               <button
                 onClick={reset}
-                className="flex-1 rounded-lg border border-border px-4 py-2.5 text-sm font-medium text-muted transition hover:bg-bg"
+                className="cursor-pointer flex-1 rounded-lg border border-border px-4 py-2.5 text-sm font-medium text-muted transition hover:bg-bg"
               >
                 Reset
               </button>
               <button
                 onClick={copyResults}
                 disabled={!result}
-                className="flex-1 rounded-lg bg-accent px-4 py-2.5 text-sm font-medium text-white transition hover:bg-orange-600 disabled:opacity-40"
+                className="cursor-pointer flex-1 rounded-lg bg-accent px-4 py-2.5 text-sm font-medium text-white transition hover:bg-orange-600 disabled:opacity-40 disabled:cursor-not-allowed"
               >
                 {copied ? 'Copied!' : 'Copy Results'}
               </button>

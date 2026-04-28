@@ -12,7 +12,7 @@ export default function FAQ() {
         <div key={i}>
           <button
             onClick={() => setOpenIndex(openIndex === i ? null : i)}
-            className="flex w-full items-center justify-between gap-4 bg-surface px-5 py-4 text-left transition hover:bg-bg"
+            className="cursor-pointer flex w-full items-center justify-between gap-4 bg-surface px-5 py-4 text-left transition hover:bg-bg"
             aria-expanded={openIndex === i}
           >
             <h3 className="font-semibold text-primary text-sm sm:text-base">{item.question}</h3>
