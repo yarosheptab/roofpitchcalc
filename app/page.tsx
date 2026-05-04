@@ -97,6 +97,9 @@ export default function HomePage() {
               <a href="https://fazier.com/launches/roofangler.com" target="_blank" rel="noopener noreferrer" className="opacity-60 transition hover:opacity-100">
                 <img src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=featured&theme=light" alt="Featured on Fazier" height={40} style={{ height: 40, width: 'auto' }} />
               </a>
+              <a href="https://earlyhunt.com/project/roof-pitch-calculator-calculate-pitch-angle-rafter-length-free" target="_blank" rel="noopener noreferrer" className="opacity-60 transition hover:opacity-100">
+                <img src="https://earlyhunt.com/badges/earlyhunt-badge-light.svg" alt="Featured on EarlyHunt" height={40} style={{ height: 40, width: 'auto' }} />
+              </a>
             </div>
           </section>
         </article>
