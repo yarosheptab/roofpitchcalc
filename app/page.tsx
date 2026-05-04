@@ -110,7 +110,7 @@ export default function HomePage() {
                 <img src="https://twelve.tools/badge0-light.svg" alt="Featured on Twelve Tools" height={40} style={{ height: 40, width: 'auto' }} />
               </a>
               <a href="https://startupfa.me/s/roof-pitch-calc?utm_source=roofangler.com" target="_blank" rel="noopener noreferrer" className="opacity-60 transition hover:opacity-100">
-                <img src="https://startupfa.me/badges/featured/default.webp" alt="Featured on Startup Fame" height={40} style={{ height: 40, width: 'auto' }} />
+                <img src="https://startupfa.me/badges/featured-badge.webp" alt="Featured on Startup Fame" height={40} style={{ height: 40, width: 'auto' }} />
               </a>
             </div>
           </section>
