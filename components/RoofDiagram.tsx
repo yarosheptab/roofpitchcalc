@@ -21,12 +21,12 @@ export default function RoofDiagram({ result, spanFt }: Props) {
     : baseY - 8
 
   const angleDeg = result?.angleDeg ?? 0
-  const pitchLabel = result ? `${result.pitchRatio.toFixed(2)}:12` : ''
+  const pitchLabel = result ? `${parseFloat(result.pitchRatio.toFixed(2))}:12` : ''
 
   return (
     <div className="border border-border bg-surface w-full">
       <div className="border-b border-border px-4 py-2">
-        <span className="text-xs uppercase tracking-[0.1em] font-medium text-muted">Diagram</span>
+        <span className="text-xs uppercase tracking-widest font-medium text-muted">Diagram</span>
       </div>
       <div className="p-3">
         <svg

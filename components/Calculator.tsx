@@ -1,8 +1,8 @@
 'use client'
 
-import { useState, useCallback } from 'react'
-import { fromRiseRun, fromAngle, fromPitchRatio, addRafterLength } from '@/lib/calculations'
+import { addRafterLength, fromAngle, fromPitchRatio, fromRiseRun } from '@/lib/calculations'
 import type { RoofCalcResult } from '@/types'
+import { useCallback, useState } from 'react'
 import ResultsCard from './ResultsCard'
 import RoofDiagram from './RoofDiagram'
 
@@ -114,7 +114,7 @@ export default function Calculator() {
   const copyResults = () => {
     if (!result) return
     const lines = [
-      `Pitch Ratio: ${result.pitchRatio.toFixed(2)}:12`,
+      `Pitch Ratio: ${parseFloat(result.pitchRatio.toFixed(2))}:12`,
       `Angle: ${result.angleDeg.toFixed(1)}°`,
       `Slope: ${result.slopePct.toFixed(1)}%`,
       `Rafter Multiplier: ${result.rafterMultiplier.toFixed(4)}`,
@@ -140,7 +140,7 @@ export default function Calculator() {
           <button
             key={tab.id}
             onClick={() => { setActiveTab(tab.id); setError('') }}
-            className={`cursor-pointer flex-1 px-4 py-3.5 text-xs uppercase tracking-[0.1em] font-medium transition-colors border-b-2 ${
+            className={`cursor-pointer flex-1 px-4 py-3.5 text-xs uppercase tracking-widest font-medium transition-colors border-b-2 ${
               activeTab === tab.id
                 ? 'border-primary text-primary bg-bg'
                 : 'border-transparent text-muted hover:text-primary hover:bg-bg'
