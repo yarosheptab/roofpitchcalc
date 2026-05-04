@@ -112,6 +112,9 @@ export default function HomePage() {
               <a href="https://startupfa.me/s/roof-pitch-calc?utm_source=roofangler.com" target="_blank" rel="noopener noreferrer" className="opacity-60 transition hover:opacity-100">
                 <img src="https://startupfa.me/badges/featured-badge.webp" alt="Featured on Startup Fame" height={40} style={{ height: 40, width: 'auto' }} />
               </a>
+              <a href="https://submitmysaas.com" target="_blank" rel="noopener noreferrer" className="opacity-60 transition hover:opacity-100">
+                <img src="https://submitmysaas.com/featured-badge.png" alt="Featured on SubmitMySaas" height={40} style={{ height: 40, width: 'auto' }} />
+              </a>
             </div>
           </section>
         </article>
