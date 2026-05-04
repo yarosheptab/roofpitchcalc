@@ -118,6 +118,9 @@ export default function HomePage() {
               <a href="https://acidtools.com" target="_blank" rel="noopener noreferrer" className="opacity-60 transition hover:opacity-100">
                 <img src="https://acidtools.com/assets/images/badge.png" alt="Featured on Acid Tools" height={40} style={{ height: 40, width: 'auto' }} />
               </a>
+              <a href="https://appalist.com" target="_blank" rel="noopener noreferrer" className="opacity-60 transition hover:opacity-100">
+                <img src="https://appalist.com/assets/images/badge.png" alt="Featured on Appa List" height={40} style={{ height: 40, width: 'auto' }} />
+              </a>
             </div>
           </section>
         </article>
