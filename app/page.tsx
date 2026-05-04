@@ -87,6 +87,18 @@ export default function HomePage() {
               </div>
             </section>
           )}
+          {/* Featured On */}
+          <section aria-label="Featured On" className="mb-8">
+            <div className="flex items-baseline gap-4 mb-5">
+              <span className="text-[10px] uppercase tracking-widest text-muted">Featured On</span>
+              <div className="flex-1 h-px bg-border" />
+            </div>
+            <div className="flex flex-wrap items-center gap-6">
+              <a href="https://fazier.com/launches/roofangler.com" target="_blank" rel="noopener noreferrer" className="opacity-60 transition hover:opacity-100">
+                <img src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=featured&theme=light" alt="Featured on Fazier" height={40} style={{ height: 40, width: 'auto' }} />
+              </a>
+            </div>
+          </section>
         </article>
       </div>
     </>
