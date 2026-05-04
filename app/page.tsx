@@ -106,6 +106,9 @@ export default function HomePage() {
               <a href="https://findly.tools/roof-pitch-calculator?utm_source=roof-pitch-calculator" target="_blank" rel="noopener noreferrer" className="opacity-60 transition hover:opacity-100">
                 <img src="https://findly.tools/badges/findly-tools-badge-light.svg" alt="Featured on Findly.tools" height={40} style={{ height: 40, width: 'auto' }} />
               </a>
+              <a href="https://twelve.tools" target="_blank" rel="noopener noreferrer" className="opacity-60 transition hover:opacity-100">
+                <img src="https://twelve.tools/badge0-light.svg" alt="Featured on Twelve Tools" height={40} style={{ height: 40, width: 'auto' }} />
+              </a>
             </div>
           </section>
         </article>
