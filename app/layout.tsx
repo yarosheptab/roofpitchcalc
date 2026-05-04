@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { DM_Serif_Display, Sora, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 import './globals.css'
@@ -26,6 +26,10 @@ const geistMono = Geist_Mono({
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://roofangler.com'
 
+export const viewport: Viewport = {
+  themeColor: '#ffffff',
+}
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
@@ -41,6 +45,26 @@ export const metadata: Metadata = {
     'slope calculator',
     'roof pitch to degrees',
   ],
+  icons: {
+    apple: [
+      { url: '/apple-icon-57x57.png', sizes: '57x57' },
+      { url: '/apple-icon-60x60.png', sizes: '60x60' },
+      { url: '/apple-icon-72x72.png', sizes: '72x72' },
+      { url: '/apple-icon-76x76.png', sizes: '76x76' },
+      { url: '/apple-icon-114x114.png', sizes: '114x114' },
+      { url: '/apple-icon-120x120.png', sizes: '120x120' },
+      { url: '/apple-icon-144x144.png', sizes: '144x144' },
+      { url: '/apple-icon-152x152.png', sizes: '152x152' },
+      { url: '/apple-icon-180x180.png', sizes: '180x180' },
+    ],
+    icon: [
+      { url: '/android-icon-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+    ],
+  },
+  manifest: '/manifest.json',
   openGraph: {
     type: 'website',
     siteName: 'Roof Pitch Calculator',
@@ -48,6 +72,10 @@ export const metadata: Metadata = {
   },
   twitter: { card: 'summary_large_image' },
   robots: { index: true, follow: true },
+  other: {
+    'msapplication-TileColor': '#ffffff',
+    'msapplication-TileImage': '/ms-icon-144x144.png',
+  },
 }
 
 const websiteSchema = {
