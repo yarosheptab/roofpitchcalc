@@ -32,7 +32,7 @@ export default function OgImage() {
         </div>
 
         <div style={{ fontSize: 18, color: '#C0391E', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
-          {process.env.NEXT_PUBLIC_SITE_URL ?? 'roofpitchcalculator.app'}
+          {process.env.NEXT_PUBLIC_SITE_URL ?? 'roofangler.com'}
         </div>
       </div>
     ),

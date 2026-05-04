@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://roofpitchcalculator.app'
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://roofangler.com'
 
 export const metadata: Metadata = {
   title: 'Cookie Policy',
@@ -119,7 +119,7 @@ export default function CookiePolicyPage() {
 
       <h2 className="text-xl font-bold text-primary mt-8 mb-3">Cookie Consent</h2>
       <p className="text-muted leading-relaxed mb-4">
-        When you first visit roofpitchcalculator.app, a cookie consent banner will appear.
+        When you first visit roofangler.com, a cookie consent banner will appear.
         You can choose to:
       </p>
       <ul className="list-disc pl-6 text-muted leading-relaxed mb-4 space-y-1">
@@ -142,8 +142,8 @@ export default function CookiePolicyPage() {
       <p className="text-muted leading-relaxed mb-4">
         If you have any questions about our use of cookies or this Cookie Policy, please contact
         us at{' '}
-        <a href="mailto:contact@roofpitchcalculator.app" className="underline">
-          contact@roofpitchcalculator.app
+        <a href="mailto:contact@roofangler.com" className="underline">
+          contact@roofangler.com
         </a>
         .
       </p>

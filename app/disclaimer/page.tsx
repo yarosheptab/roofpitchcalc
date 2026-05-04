@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://roofpitchcalculator.app'
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://roofangler.com'
 
 export const metadata: Metadata = {
   title: 'Disclaimer',
@@ -87,7 +87,7 @@ export default function DisclaimerPage() {
         This site may include links to external websites for reference or convenience. These
         links are provided in good faith, but we do not endorse, control, or take responsibility
         for the accuracy, legality, or content of any external site. Clicking an external link
-        and leaving roofpitchcalculator.app is done at your own discretion. We recommend
+        and leaving roofangler.com is done at your own discretion. We recommend
         reviewing the privacy policy and terms of any external site you visit.
       </p>
     </div>

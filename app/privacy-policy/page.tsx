@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://roofpitchcalculator.app'
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://roofangler.com'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
@@ -22,7 +22,7 @@ export default function PrivacyPolicyPage() {
       <h2 className="text-xl font-bold text-primary mt-8 mb-3">Introduction</h2>
       <p className="text-muted leading-relaxed mb-4">
         Welcome to Roof Pitch Calculator. This Privacy Policy explains how we collect, use, and
-        protect information when you visit roofpitchcalculator.app. Our calculator runs entirely
+        protect information when you visit roofangler.com. Our calculator runs entirely
         in your browser — no calculation inputs or results are ever transmitted to our servers.
         We are committed to being transparent about the limited data we do collect.
       </p>
@@ -98,8 +98,8 @@ export default function PrivacyPolicyPage() {
         Because we collect only aggregate, anonymized analytics data, we cannot identify or
         retrieve data associated with a specific individual. To exercise any of the above rights
         or ask a privacy-related question, please contact us at{' '}
-        <a href="mailto:contact@roofpitchcalculator.app" className="underline">
-          contact@roofpitchcalculator.app
+        <a href="mailto:contact@roofangler.com" className="underline">
+          contact@roofangler.com
         </a>
         .
       </p>
@@ -123,8 +123,8 @@ export default function PrivacyPolicyPage() {
       <p className="text-muted leading-relaxed mb-4">
         If you have any questions or concerns about this Privacy Policy or your data, please
         reach out to us at{' '}
-        <a href="mailto:contact@roofpitchcalculator.app" className="underline">
-          contact@roofpitchcalculator.app
+        <a href="mailto:contact@roofangler.com" className="underline">
+          contact@roofangler.com
         </a>
         .
       </p>

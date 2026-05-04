@@ -7,7 +7,7 @@ import JsonLd from '@/components/JsonLd'
 import BlogCard from '@/components/BlogCard'
 import Link from 'next/link'
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://roofpitchcalculator.app'
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://roofangler.com'
 
 interface Props {
   params: Promise<{ slug: string }>

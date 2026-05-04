@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { getAllPostsMeta } from '@/lib/blog'
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://roofpitchcalculator.app'
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://roofangler.com'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPostsMeta()

@@ -8,7 +8,7 @@ import JsonLd from '@/components/JsonLd'
 import { getAllPostsMeta } from '@/lib/blog'
 import { webApplicationSchema, faqSchema, breadcrumbSchema } from '@/lib/structured-data'
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://roofpitchcalculator.app'
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://roofangler.com'
 
 export const metadata: Metadata = {
   title: 'Roof Pitch Calculator – Calculate Pitch, Angle & Rafter Length Free',

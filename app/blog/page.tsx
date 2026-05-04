@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { getAllPostsMeta } from '@/lib/blog'
 import BlogCard from '@/components/BlogCard'
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://roofpitchcalculator.app'
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://roofangler.com'
 
 export const metadata: Metadata = {
   title: 'Roofing & Construction Blog',

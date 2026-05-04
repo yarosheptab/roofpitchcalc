@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://roofpitchcalculator.app'
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://roofangler.com'
 
 export const metadata: Metadata = {
   title: 'Terms of Service',
@@ -21,7 +21,7 @@ export default function TermsOfServicePage() {
 
       <h2 className="text-xl font-bold text-primary mt-8 mb-3">Acceptance of Terms</h2>
       <p className="text-muted leading-relaxed mb-4">
-        By accessing or using Roof Pitch Calculator at roofpitchcalculator.app, you agree to be
+        By accessing or using Roof Pitch Calculator at roofangler.com, you agree to be
         bound by these Terms of Service. If you do not agree to these terms, please do not use
         this site. These terms apply to all visitors and users of the site.
       </p>
@@ -118,8 +118,8 @@ export default function TermsOfServicePage() {
       <h2 className="text-xl font-bold text-primary mt-8 mb-3">Contact</h2>
       <p className="text-muted leading-relaxed mb-4">
         If you have any questions about these Terms of Service, please contact us at{' '}
-        <a href="mailto:contact@roofpitchcalculator.app" className="underline">
-          contact@roofpitchcalculator.app
+        <a href="mailto:contact@roofangler.com" className="underline">
+          contact@roofangler.com
         </a>
         .
       </p>
