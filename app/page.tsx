@@ -103,6 +103,9 @@ export default function HomePage() {
               <a href="https://open-launch.com/projects/roof-pitch-calculator" target="_blank" rel="noopener noreferrer" className="opacity-60 transition hover:opacity-100">
                 <img src="https://open-launch.com/api/badge/a995022e-cd31-436a-8ee1-5871da0395f4/featured-light.svg" alt="Featured on Open-Launch" height={40} style={{ height: 40, width: 'auto' }} />
               </a>
+              <a href="https://findly.tools/roof-pitch-calculator?utm_source=roof-pitch-calculator" target="_blank" rel="noopener noreferrer" className="opacity-60 transition hover:opacity-100">
+                <img src="https://findly.tools/badges/findly-tools-badge-light.svg" alt="Featured on Findly.tools" height={40} style={{ height: 40, width: 'auto' }} />
+              </a>
             </div>
           </section>
         </article>
