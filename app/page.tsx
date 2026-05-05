@@ -175,6 +175,9 @@ export default function HomePage() {
               <a href="https://www.microsaasexamples.com/" target="_blank" rel="noopener noreferrer" className="opacity-60 transition hover:opacity-100 text-xs text-muted font-sans uppercase tracking-widest">
                 Featured On Micro SaaS Examples
               </a>
+              <a href="https://huzzler.so/products/cHtk0F84Dz/roof-pitch-calculator-1" target="_blank" rel="noopener noreferrer" className="opacity-60 transition hover:opacity-100">
+                <img src="https://huzzler.so/assets/images/embeddable-badges/featured.png" alt="Featured on Huzzler" height={40} style={{ height: 40, width: 'auto' }} />
+              </a>
             </div>
           </section>
         </article>
