@@ -163,6 +163,9 @@ export default function HomePage() {
               <a href="https://launchigniter.com/product/roof-pitch-calculator?ref=badge-roof-pitch-calculator" target="_blank" rel="noopener noreferrer" className="opacity-60 transition hover:opacity-100">
                 <img src="https://launchigniter.com/api/badge/roof-pitch-calculator?theme=light" alt="Featured on LaunchIgniter" width={212} height={55} style={{ height: 55, width: 'auto' }} />
               </a>
+              <a href="https://startupfa.st" target="_blank" rel="noopener noreferrer" className="opacity-60 transition hover:opacity-100">
+                <img src="https://startupfa.st/images/badges/powered-by-light.svg" alt="Featured on Startup Fast" height={44} style={{ height: 44, width: 'auto' }} />
+              </a>
             </div>
           </section>
         </article>
