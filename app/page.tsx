@@ -166,6 +166,9 @@ export default function HomePage() {
               <a href="https://startupfa.st" target="_blank" rel="noopener noreferrer" className="opacity-60 transition hover:opacity-100">
                 <img src="https://startupfa.st/images/badges/powered-by-light.svg" alt="Featured on Startup Fast" height={44} style={{ height: 44, width: 'auto' }} />
               </a>
+              <a href="https://saaspa.ge/product/cmot0hns90001ic04nni620tt" target="_blank" rel="noopener noreferrer" className="opacity-60 transition hover:opacity-100">
+                <img src="https://saaspa.ge/api/embed/product/cmot0hns90001ic04nni620tt/badge.png?theme=orange" alt="Featured on Saaspa.ge" height={40} style={{ height: 40, width: 'auto' }} />
+              </a>
             </div>
           </section>
         </article>
