@@ -172,6 +172,9 @@ export default function HomePage() {
               <a href="https://postmake.io" target="_blank" rel="noopener noreferrer" className="opacity-60 transition hover:opacity-100">
                 <img src="https://postmake.io/postmake_badge_light.png" alt="Featured on Postmake" height={40} style={{ height: 40, width: 'auto' }} />
               </a>
+              <a href="https://www.microsaasexamples.com/" target="_blank" rel="noopener noreferrer" className="opacity-60 transition hover:opacity-100 text-xs text-muted font-sans uppercase tracking-widest">
+                Featured On Micro SaaS Examples
+              </a>
             </div>
           </section>
         </article>
