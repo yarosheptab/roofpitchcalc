@@ -148,6 +148,9 @@ export default function HomePage() {
               <a href="https://turbo0.com/item/roof-pitch-calculator" target="_blank" rel="noopener noreferrer" className="opacity-60 transition hover:opacity-100">
                 <img src="https://img.turbo0.com/badge-listed-light.svg" alt="Listed on Turbo0" height={40} style={{ height: 40, width: 'auto' }} />
               </a>
+              <a href="https://openhunts.com" target="_blank" rel="noopener noreferrer" className="opacity-60 transition hover:opacity-100">
+                <img src="https://cdn.openhunts.com/badges/club.webp" alt="OpenHunts Club Member" height={40} style={{ height: 40, width: 'auto' }} />
+              </a>
             </div>
           </section>
         </article>
