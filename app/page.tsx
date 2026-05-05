@@ -157,6 +157,9 @@ export default function HomePage() {
               <a href="https://www.tinystartups.com" target="_blank" rel="noopener noreferrer" className="opacity-60 transition hover:opacity-100">
                 <img src="https://www.tinystartups.com/api/featured-badge/cmosw6lby0006136w2ug1004z" alt="Featured on Tiny Startups" height={40} style={{ height: 40, width: 'auto' }} />
               </a>
+              <a href="https://submithunt.com" target="_blank" rel="noopener noreferrer" className="opacity-60 transition hover:opacity-100">
+                <img src="https://submithunt.com/badge.png" alt="Featured on SubmitHunt" height={40} style={{ height: 40, width: 'auto' }} />
+              </a>
             </div>
           </section>
         </article>
