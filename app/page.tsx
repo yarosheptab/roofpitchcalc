@@ -133,6 +133,9 @@ export default function HomePage() {
               <a href="https://ufind.best/products/roof-pitch-calculator" target="_blank" rel="noopener noreferrer" className="opacity-60 transition hover:opacity-100">
                 <img src="https://ufind.best/badges/ufind-best-badge-light.svg" alt="Featured on ufind.best" height={40} style={{ height: 40, width: 'auto' }} />
               </a>
+              <a href="https://weliketools.com" target="_blank" rel="noopener noreferrer" className="opacity-60 transition hover:opacity-100">
+                <img src="https://weliketools.com/assets/images/badge.png" alt="We Like Tools" height={40} style={{ height: 40, width: 'auto' }} />
+              </a>
             </div>
           </section>
         </article>
