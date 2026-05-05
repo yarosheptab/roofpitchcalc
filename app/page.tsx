@@ -127,6 +127,9 @@ export default function HomePage() {
               <a href="https://neeed.directory/products/roof-pitch-calculator?utm_source=roof-pitch-calculator" target="_blank" rel="noopener noreferrer" className="opacity-60 transition hover:opacity-100">
                 <img src="https://neeed.directory/badges/neeed-badge-light.svg" alt="Featured on neeed.directory" height={40} style={{ height: 40, width: 'auto' }} />
               </a>
+              <a href="https://www.foundrlist.com/product/roofpitchcalculator?utm_source=badge&utm_medium=embed" target="_blank" rel="noopener noreferrer" className="opacity-60 transition hover:opacity-100">
+                <img src="https://www.foundrlist.com/api/badge/roofpitchcalculator" alt="Featured on FoundrList" height={40} style={{ height: 40, width: 'auto' }} />
+              </a>
             </div>
           </section>
         </article>
