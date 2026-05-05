@@ -139,6 +139,9 @@ export default function HomePage() {
               <a href="https://productfame.com/products/roof-pitch-calculator" target="_blank" rel="noopener noreferrer" className="opacity-60 transition hover:opacity-100">
                 <img src="https://productfame.com/badges/featured-light.svg" alt="Featured on ProductFame" height={40} style={{ height: 40, width: 'auto' }} />
               </a>
+              <a href="https://tinylaunchpad.com/projects/roof-pitch-calculator" target="_blank" rel="noopener noreferrer" className="opacity-60 transition hover:opacity-100">
+                <img src="https://tinylaunchpad.com/images/badges/featured-on-light-mode.png" alt="Featured on TinyLaunchpad" height={40} style={{ height: 40, width: 'auto' }} />
+              </a>
             </div>
           </section>
         </article>
