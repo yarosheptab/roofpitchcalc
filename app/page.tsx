@@ -130,6 +130,9 @@ export default function HomePage() {
               <a href="https://www.foundrlist.com/product/roofpitchcalculator?utm_source=badge&utm_medium=embed" target="_blank" rel="noopener noreferrer" className="opacity-60 transition hover:opacity-100">
                 <img src="https://www.foundrlist.com/api/badge/roofpitchcalculator" alt="Featured on FoundrList" height={40} style={{ height: 40, width: 'auto' }} />
               </a>
+              <a href="https://ufind.best/products/roof-pitch-calculator" target="_blank" rel="noopener noreferrer" className="opacity-60 transition hover:opacity-100">
+                <img src="https://ufind.best/badges/ufind-best-badge-light.svg" alt="Featured on ufind.best" height={40} style={{ height: 40, width: 'auto' }} />
+              </a>
             </div>
           </section>
         </article>
