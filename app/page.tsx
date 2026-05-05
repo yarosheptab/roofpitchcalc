@@ -178,6 +178,9 @@ export default function HomePage() {
               <a href="https://huzzler.so/products/cHtk0F84Dz/roof-pitch-calculator-1" target="_blank" rel="noopener noreferrer" className="opacity-60 transition hover:opacity-100">
                 <img src="https://huzzler.so/assets/images/embeddable-badges/featured.png" alt="Featured on Huzzler" height={40} style={{ height: 40, width: 'auto' }} />
               </a>
+              <a href="https://indie.deals?ref=https%3A%2F%2Froofangler.com" target="_blank" rel="noopener noreferrer" className="opacity-60 transition hover:opacity-100">
+                <img src="https://indie.deals/logo_badge.png" alt="Featured on Indie.Deals" height={40} style={{ height: 40, width: 'auto' }} />
+              </a>
             </div>
           </section>
         </article>
