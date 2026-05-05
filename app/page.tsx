@@ -160,6 +160,9 @@ export default function HomePage() {
               <a href="https://submithunt.com" target="_blank" rel="noopener noreferrer" className="opacity-60 transition hover:opacity-100">
                 <img src="https://submithunt.com/badge.png" alt="Featured on SubmitHunt" height={40} style={{ height: 40, width: 'auto' }} />
               </a>
+              <a href="https://launchigniter.com/product/roof-pitch-calculator?ref=badge-roof-pitch-calculator" target="_blank" rel="noopener noreferrer" className="opacity-60 transition hover:opacity-100">
+                <img src="https://launchigniter.com/api/badge/roof-pitch-calculator?theme=light" alt="Featured on LaunchIgniter" width={212} height={55} style={{ height: 55, width: 'auto' }} />
+              </a>
             </div>
           </section>
         </article>
